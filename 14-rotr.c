@@ -7,20 +7,20 @@
  */
 void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter)
 {
-	stack_t *copy;
+	stack_t *a_copy;
 
-	copy = *head;
+	a_copy = *head;
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return;
 	}
-	while (copy->next)
+	while (a_copy->next)
 	{
-		copy = copy->next;
+		a_copy = a_copy->next;
 	}
-	copy->next = *head;
-	copy->prev->next = NULL;
-	copy->prev = NULL;
-	(*head)->prev = copy;
-	(*head) = copy;
+	a_copy->next = *head;
+	a_copy->prev->next = NULL;
+	a_copy->prev = NULL;
+	(*head)->prev = a_copy;
+	(*head) = a_copy;
 }
