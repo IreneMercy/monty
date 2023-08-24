@@ -39,6 +39,7 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
+void free_stack(stack_t *head);
 extern bus_t bus;
 void f_pop(stack_t **head, unsigned int counter);
 void f_swap(stack_t **head, unsigned int counter);
